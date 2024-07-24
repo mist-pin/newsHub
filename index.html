@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsHub</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <!-- Login Section -->
+    <div class="container login">
+        <h1>Admin Login</h1>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="adminLogin()">Login</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="container admin-panel">
+        <h1>Admin Panel</h1>
+        <input type="text" id="news-title" placeholder="Enter News Title">
+        <div id="editor-container" class="editor-container"></div>
+        <button onclick="submitNews()">Submit News</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- News List -->
+    <div class="container news-list">
+        <h1>News</h1>
+        <div id="news-container"></div>
+    </div>
+    <script src="./assets/js/quill.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+
+</html>
