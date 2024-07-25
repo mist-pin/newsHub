@@ -22,6 +22,29 @@
         </div>
     </nav>
 
+    <!-- Login Section -->
+    <section class="login_sec">
+        <div class="container login">
+            <h1>Admin Login</h1>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="adminLogin()">Login</button>
+        </div>
+    </section>
+
+    <!-- Admin Panel Section-->
+    <section class="admin_panel_sec">
+        <button onclick="logout()">logout</button>
+        <div class="container admin-panel">
+            <h1>Admin Panel</h1>
+            <input type="text" id="news-title" placeholder="Enter News Title">
+            <input type="file" id="news-title" placeholder="Choose Thumbnail">
+            <textarea name="" id="" placeholder="news content"></textarea>
+
+            <button onclick="submitNews()">publish news</button>
+        </div>
+    </section>
+
     <!-- All News List -->
     <section class="news_list_sec">
         <div class="container news-list">
@@ -34,7 +57,7 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Login Section -->
     <section class="footer_sec">
         <div class="footer_link_holder">
             <a href="" class="footer_link">Home</a>
@@ -43,7 +66,8 @@
     </section>
 
 
-    <script type="module" src="./assets/js/index.js"></script>
+    <script src="./assets/js/quill.js"></script>
+    <script type="module" src="./assets/js/admin.js"></script>
 
 </body>
 

@@ -1,20 +1,20 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
-import { ref, push, get, set, child } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
-
+import { getDatabase, ref, push, set, get, child } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBZuNtoMgy77mvk165vuzBhOecjBQRULVA",
-    authDomain: "expensetracker-27c8f.firebaseapp.com",
-    databaseURL: "https://expensetracker-27c8f-default-rtdb.firebaseio.com",
-    projectId: "expensetracker-27c8f",
-    storageBucket: "expensetracker-27c8f.appspot.com",
-    messagingSenderId: "487606584678",
-    appId: "1:487606584678:web:5f7316bd18dcc913fb74a7"
+    apiKey: "AIzaSyDDgbdv6mUfLewoZBACWLC7i4dNUgAimak",
+    authDomain: "newshub-5d1e6.firebaseapp.com",
+    projectId: "newshub-5d1e6",
+    storageBucket: "newshub-5d1e6.appspot.com",
+    messagingSenderId: "1041591026461",
+    appId: "1:1041591026461:web:2a8b7c699030387bbed7f4"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
 
-export { database, ref, get, set, push, child };
+export { database, ref, push, set, get, child, auth, signInWithEmailAndPassword, signOut, onAuthStateChanged, storage, storageRef, uploadBytes, getDownloadURL };
