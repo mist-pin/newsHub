@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
-<body onload="fetchNews()">
-
+<body>
     <!-- navigation section -->
     <nav class="nav_sec">
         <div class="nav_holder">
@@ -17,25 +16,21 @@
             </div>
             <div class="nav_link_holder">
                 <a href="index.html" class="nav_link">Home</a>
-                <a href="admin.html" class="nav_link">Admin</a>
             </div>
         </div>
     </nav>
 
-    <!-- All News List -->
-    <section class="news_list_sec">
-        <div id="news-container">
+    <!-- Login Section -->
+    <section class="login_sec">
+        <div class="container login">
+            <h1>Admin Login</h1>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="adminLogin()">Login</button>
         </div>
     </section>
 
-
-    <!-- Footer Section -->
-    <section class="footer_sec">
-        <span>all &copy;copyrights reserved</span>
-    </section>
-
-
-    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/admin.js"></script>
 
 </body>
 

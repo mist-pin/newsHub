@@ -17,4 +17,4 @@ const database = getDatabase(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
-export { database, ref, push, set, get, child, auth, signInWithEmailAndPassword, signOut, onAuthStateChanged, storage, storageRef, uploadBytes, getDownloadURL };
+export {getDatabase, database, ref, push, set, get, child, auth, signInWithEmailAndPassword, signOut, getAuth, onAuthStateChanged, storage, storageRef, uploadBytes, getDownloadURL };

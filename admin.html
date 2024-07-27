@@ -3,61 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsHub</title>
+    <title>NewsHub | Admin</title>
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
-<body>
+<body onload="checkAuth()">
 
     <!-- navigation section -->
     <nav class="nav_sec">
         <div class="nav_holder">
             <div class="nav_brand">
-                <span>nav_brand</span>
+                <span>nEwS HUB</span>
             </div>
             <div class="nav_link_holder">
-                <a href="" class="nav_link">Home</a>
-                <a href="" class="nav_link">Admin</a>
+                <a href="index.html" class="nav_link">Home</a>
+                <span class="nav_link" onclick="logout()">Logout</span>
             </div>
         </div>
     </nav>
 
-    <!-- Login Section -->
-    <section class="login_sec">
-        <div class="container login">
-            <h1>Admin Login</h1>
-            <input type="email" id="login-email" placeholder="Email">
-            <input type="password" id="login-password" placeholder="Password">
-            <button onclick="adminLogin()">Login</button>
-        </div>
-    </section>
-
     <!-- Admin Panel Section-->
     <section class="admin_panel_sec">
-        <button onclick="logout()">logout</button>
-        <div class="container admin-panel">
-            <h1>Admin Panel</h1>
-            <input type="text" id="news-title" placeholder="Enter News Title">
-            <input type="file" id="news-title" placeholder="Choose Thumbnail">
-            <textarea name="" id="" placeholder="news content"></textarea>
 
-            <button onclick="submitNews()">publish news</button>
+        <div class="container admin-panel">
+            <h1>Add News</h1>
+            <input type="text" id="news-title" placeholder="Enter News Title" required>
+            <input type="file" id="news-thumbnail" placeholder="Choose Thumbnail" required>
+            <textarea name="" id="news-content" placeholder="news content" required></textarea>
+
+            <button onclick="add_news()">publish news</button>
         </div>
     </section>
 
     <!-- All News List -->
     <section class="news_list_sec">
-        <div class="container news-list">
-            <h1>News</h1>
-            <div id="news-container">
-                <h3 class="news_head">heading</h3>
-                <img src="" alt="thubnail">
-                <p class="news_contnt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, cupiditate.</p>
-            </div>
+        <div id="news-container">
         </div>
     </section>
 
-    <!-- Login Section -->
+    <!-- Footer Section -->
     <section class="footer_sec">
         <div class="footer_link_holder">
             <a href="" class="footer_link">Home</a>
@@ -66,7 +50,6 @@
     </section>
 
 
-    <script src="./assets/js/quill.js"></script>
     <script type="module" src="./assets/js/admin.js"></script>
 
 </body>

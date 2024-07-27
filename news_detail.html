@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Detail</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <!-- navigation section -->
+    <nav class="nav_sec">
+        <div class="nav_holder">
+            <div class="nav_brand">
+                <span>nEwS HUB</span>
+            </div>
+            <div class="nav_link_holder">
+                <a href="index.html" class="nav_link">Home</a>
+                <a href="admin.html" class="nav_link">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="news-detail">
+        <div class="news_container">
+            <h1 class="nws-title" id="news-title"></h1>
+            <img class="nws-thumb" id="news-thumbnail" alt="News Thumbnail" />
+            <div class="nws-content" id="news-content"></div>
+        </div>
+        <hr>
+        <div class="cmt_holder" id="comment_holder">
+            <div class="add_cmt_holder">
+                <textarea class="new_comment" id="new_comment" name="" id=""
+                    placeholder="Leave a comment..."></textarea>
+                <button class="publish_cmt" onclick="addComment()"> send ></button>
+            </div>
+            <div class="com_hld" id="com_holder">
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./assets/js/news_detail.js"></script>
+</body>
+
+</html>
